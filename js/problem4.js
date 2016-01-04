@@ -27,3 +27,24 @@
 */
 
 // Write your JavaScript here
+function changeElementText(element, answer) {
+    $(element).text(answer);
+}
+
+function countCurrency() {
+    var validDenominations = [5, 10, 20, 50, 100, 500, 1000];
+    var currencyTotal = 0;
+    var givenNotes = ""
+
+    for (var i = 0; i < arguments.length; i++) {
+        var value = parseInt(arguments[i]);
+        if (validDenominations.indexOf(value) === -1) {
+            break;
+        }
+        currencyTotal += value;
+    }
+
+    var givenNotes = Array.prototype.slice.call(arguments);
+    changeElementText("#givenNotes", givenNotes.join(', '));
+    changeElementText("#currencyTotal", currencyTotal);
+}
