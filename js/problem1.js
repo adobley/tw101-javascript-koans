@@ -29,6 +29,18 @@ function kiteGame(numberOfKites) {
     var answer = "";
 
     // write some code here!
+    for (var i = 1; i <= numberOfKites; i++) {
+        if (i % 15 == 0) {
+            answer += 'Peche! Ipo kaate!';
+        } else if (i % 5 == 0) {
+            answer += 'Ipo kaate!';
+        } else if (i % 3 == 0) {
+            answer += 'Peche!';
+        } else {
+            answer += i;
+        }
+        answer += ' ';
+    }
 
     changeElementText("#answer", answer);
 }
