@@ -34,3 +34,25 @@
  */
 
 // Write your JavaScript here
+function changeElementText(element, answer) {
+    $(element).text(answer);
+}
+
+function correctAdvertisement(advertisementArray) {
+    var originalFirstLine = advertisementArray[0].join(' ');
+    changeElementText("#originalFirstLine", originalFirstLine);
+    var originalSecondLine = advertisementArray[1].join(' ');
+    changeElementText("#originalSecondLine", originalSecondLine);
+    var originalThirdLine = advertisementArray[2].join(' ')
+    changeElementText("#originalThirdLine", originalThirdLine);
+
+    advertisementArray[1].reverse();
+
+    changeElementText("#correctedAdvertisementFirstLine", originalFirstLine);
+    var correctedSecondLine = advertisementArray[1].join(' ');
+    changeElementText("#correctedAdvertisementSecondLine", correctedSecondLine);
+    changeElementText("#correctedAdvertisementThirdLine", originalThirdLine);
+
+    var wordCount = advertisementArray[0].length + advertisementArray[1].length + advertisementArray[2].length;
+    changeElementText("#wordCount", wordCount);
+}

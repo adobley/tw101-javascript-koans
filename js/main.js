@@ -10,9 +10,9 @@ $(document).ready(function() {
     fareForRide(6, 8, false);
 
     // Problem 4
-    countCurrency(10, 20, 100;
+    countCurrency(10, 20, 100);
 
     // Problem 5
-    // call your problem 5 code here
+    correctAdvertisement([["zara", "dhyaan", "dein"], ["mazarat", "chahenge"], ["attention", "please"]]);
 
 });
